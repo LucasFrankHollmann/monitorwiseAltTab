@@ -30,7 +30,8 @@ GetWindowsInMonitor() {
         
         if(X < (Right) && X > (Left)){
             title := WinGetTitle(win)
-            if (title != "" && title != "Program Manager" && WinGetClass(win) != "TopLevelWindowForOverflowXamlIsland"){
+            if (title != "" && title != "Program Manager" && WinGetClass(win) != "TopLevelWindowForOverflowXamlIsland"
+            && WinGetTitle(win) != "Drag"){
                 wins.push(win)
             }
         }
